@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "Sunny Grassland",
+    "url": "/images/grassland.jpg",
+    "description": "Hamparan padang rumput hijau yang luas terbentang di bawah langit biru cerah, menciptakan suasana damai dan membebaskan. Angin semilir meniup perlahan, membawa aroma segar dari alam terbuka."
+  },
+  {
+    "id": "2",
+    "title": "Sunset Beach",
+    "url": "/images/beach.jpg",
+    "description": "Pemandangan matahari terbenam yang memukau di tepi pantai, dengan warna oranye dan merah yang menyapu langit. Suara debur ombak berpadu dengan angin laut menciptakan ketenangan sempurna."
+  },
+  {
+    "id": "3",
+    "title": "Mountain Peak",
+    "url": "/images/mountain.jpg",
+    "description": "Puncak gunung bersalju yang menjulang tinggi menyentuh langit biru bersih. Panorama yang megah dan menantang ini memberikan rasa kagum dan hormat terhadap keagungan alam."
+  },
+  {
+    "id": "4",
+    "title": "Modern Cityscape",
+    "url": "/images/city.jpg",
+    "description": "Kota modern dengan gedung-gedung tinggi dan lampu-lampu yang mulai menyala saat senja. Suasana yang sibuk namun memikat, menggambarkan kehidupan perkotaan yang dinamis dan penuh energi."
+  },
+  {
+    "id": "5",
+    "title": "Forest Path",
+    "url": "/images/forest.jpg",
+    "description": "Jalan kecil yang menyusuri hutan rimbun, dikelilingi oleh pepohonan tinggi dan dedaunan yang berbisik lembut. Tempat yang ideal untuk melepas penat dan menyatu dengan ketenangan alam."
+  },
+  {
+    "id": "6",
+    "title": "Deep Blue Sea",
+    "url": "/images/sea.jpg",
+    "description": "Lautan biru yang luas terbentang sejauh mata memandang, dengan ombak tenang yang bergulung perlahan. Suasana damai ini membawa ketenangan jiwa dan keindahan tak bertepi."
+  }
+]
