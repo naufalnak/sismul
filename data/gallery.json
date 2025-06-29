@@ -1,38 +1,86 @@
 [
   {
     "id": "1",
-    "title": "Sunny Grassland",
-    "url": "/images/grassland.jpg",
-    "description": "Hamparan padang rumput hijau yang luas terbentang di bawah langit biru cerah, menciptakan suasana damai dan membebaskan. Angin semilir meniup perlahan, membawa aroma segar dari alam terbuka."
+    "title": "Padang Rumput Sumba",
+    "url": "/images/padang_rumput_sumba.jpg",
+    "description": "Padang Rumput Sumba membentang luas sejauh mata memandang, menghadirkan lanskap yang memesona dengan hamparan hijau yang menyejukkan jiwa. Langit biru yang bersih menjadi latar sempurna bagi alam terbuka yang belum banyak tersentuh. Suasana damai menyelimuti setiap sudutnya, ditemani semilir angin yang membawa aroma rerumputan liar dan ketenangan sejati. Tempat ini sangat cocok bagi siapa pun yang ingin menyepi dari hiruk-pikuk kota dan menyatu dengan alam.",
+    "maps_url": "https://maps.app.goo.gl/y6zK9db7gq5CMZsC6"
   },
   {
     "id": "2",
-    "title": "Sunset Beach",
-    "url": "/images/beach.jpg",
-    "description": "Pemandangan matahari terbenam yang memukau di tepi pantai, dengan warna oranye dan merah yang menyapu langit. Suara debur ombak berpadu dengan angin laut menciptakan ketenangan sempurna."
+    "title": "Pantai Kuta Bali",
+    "url": "/images/kuta.jpg",
+    "description": "Pantai Kuta di Bali dikenal sebagai ikon keindahan tropis yang tak lekang oleh waktu. Saat senja tiba, langit di atas lautan berubah menjadi kanvas megah berwarna jingga dan merah, memukau siapa pun yang memandangnya. Debur ombak yang tenang berpadu dengan suasana santai di sepanjang pantai, menjadikan tempat ini favorit wisatawan lokal dan mancanegara. Kehidupan malamnya pun tak kalah menarik, menawarkan beragam hiburan yang semarak di tepi pantai.",
+    "maps_url": "https://maps.app.goo.gl/5v57cspdnP63ToGM8"
   },
   {
     "id": "3",
-    "title": "Mountain Peak",
-    "url": "/images/mountain.jpg",
-    "description": "Puncak gunung bersalju yang menjulang tinggi menyentuh langit biru bersih. Panorama yang megah dan menantang ini memberikan rasa kagum dan hormat terhadap keagungan alam."
+    "title": "Puncak Gunung Rinjani",
+    "url": "/images/rinjani.jpeg",
+    "description": "Gunung Rinjani adalah simbol keagungan alam Indonesia, menjulang tinggi dengan puncaknya yang menyentuh awan. Pendakian menuju puncak bukan hanya tantangan fisik, tetapi juga perjalanan spiritual yang membawa ketenangan batin. Dari atas, Anda akan disuguhi pemandangan luar biasa: kaldera besar, danau Segara Anak yang biru kehijauan, dan lanskap pegunungan yang dramatis. Tempat ini menjadi surga bagi para petualang dan pencinta alam.",
+    "maps_url": "https://maps.app.goo.gl/rbm2t1PmMNfvew3A9"
   },
   {
     "id": "4",
-    "title": "Modern Cityscape",
+    "title": "Jakarta Cityscape",
     "url": "/images/city.jpg",
-    "description": "Kota modern dengan gedung-gedung tinggi dan lampu-lampu yang mulai menyala saat senja. Suasana yang sibuk namun memikat, menggambarkan kehidupan perkotaan yang dinamis dan penuh energi."
+    "description": "Jakarta adalah potret kehidupan metropolitan yang dinamis dan terus berkembang. Gedung-gedung pencakar langit menghiasi cakrawala kota, memantulkan cahaya dari senja yang hangat hingga malam yang gemerlap. Di balik kesibukannya, Jakarta menyimpan beragam budaya, kuliner, dan kisah urban yang membentuk identitas uniknya. Cityscape ini adalah saksi bisu dari pertumbuhan pesat dan semangat masyarakat kota yang tak pernah padam.",
+    "maps_url": "https://maps.app.goo.gl/3rH8AnpYRYyEnVza7"
   },
   {
     "id": "5",
-    "title": "Forest Path",
-    "url": "/images/forest.jpg",
-    "description": "Jalan kecil yang menyusuri hutan rimbun, dikelilingi oleh pepohonan tinggi dan dedaunan yang berbisik lembut. Tempat yang ideal untuk melepas penat dan menyatu dengan ketenangan alam."
+    "title": "Hutan Kalimantan",
+    "url": "/images/hutan_kalimantan.jpg",
+    "description": "Hutan Kalimantan adalah jantung hijau Indonesia yang menyimpan kekayaan hayati luar biasa. Melangkah di antara pepohonan raksasa dan suara satwa liar adalah pengalaman yang tak ternilai. Udara segar yang kaya oksigen, suara burung eksotis, dan sinar matahari yang menembus celah daun menciptakan suasana magis. Tempat ini tak hanya cocok untuk petualangan, tetapi juga untuk merenung dan menemukan kedamaian dalam pelukan alam.",
+    "maps_url": "https://maps.app.goo.gl/C6yKzPbMoLmH5vHs6"
   },
   {
     "id": "6",
-    "title": "Deep Blue Sea",
-    "url": "/images/sea.jpg",
-    "description": "Lautan biru yang luas terbentang sejauh mata memandang, dengan ombak tenang yang bergulung perlahan. Suasana damai ini membawa ketenangan jiwa dan keindahan tak bertepi."
+    "title": "Laut Flores",
+    "url": "/images/laut_flores.jpg",
+    "description": "Laut Flores memikat dengan warna birunya yang tenang dan kejernihan airnya yang luar biasa. Keindahan bawah lautnya tak tertandingi, menjadi rumah bagi terumbu karang yang sehat dan biota laut yang beragam. Ketika matahari terbit atau tenggelam, laut ini memantulkan cahaya emas yang memukau. Suasana damai dan kesendirian di tengah samudra memberikan ruang bagi siapa saja untuk mengisi kembali energi jiwa.",
+    "maps_url": "https://maps.app.goo.gl/HezoKckEAG4f8bsGA"
+  },
+  {
+    "id": "7",
+    "title": "Danau Toba",
+    "url": "/images/danau-toba.jpg",
+    "description": "Danau Toba adalah permata di jantung Sumatera Utara, terbentuk dari letusan gunung purba ribuan tahun silam. Di tengah danau terhampar Pulau Samosir yang menyimpan warisan budaya Batak yang kaya. Udara sejuk dan pemandangan menakjubkan membuat setiap sudut Danau Toba layak dinikmati perlahan. Dari berlayar santai hingga menjelajahi desa-desa tradisional, pengalaman di sini akan membekas sepanjang masa.",
+    "maps_url": "https://maps.app.goo.gl/MN1VWaNKYhyBzJeP6"
+  },
+  {
+    "id": "8",
+    "title": "Candi Borobudur",
+    "url": "/images/borobudur.jpg",
+    "description": "Borobudur adalah candi Buddha terbesar di dunia dan mahakarya arsitektur dari abad ke-9. Setiap relief yang terukir pada batu menceritakan kisah spiritual dan filosofi kehidupan. Saat matahari terbit perlahan dari balik pegunungan, cahaya menyinari stupa-stupa raksasa menciptakan pemandangan yang sakral dan menenangkan. Kunjungan ke Borobudur bukan hanya wisata, melainkan perjalanan batin yang mendalam.",
+    "maps_url": "https://maps.app.goo.gl/zNNmbCrYj4e2ZnUJ7"
+  },
+  {
+    "id": "9",
+    "title": "Pulau Derawan",
+    "url": "/images/derawan.jpeg",
+    "description": "Pulau Derawan adalah surga tersembunyi yang menawarkan pengalaman tropis sempurna. Pasir putihnya halus bagaikan bedak, air lautnya sebening kristal, dan kehidupan bawah lautnya penuh warna. Kura-kura laut sering terlihat berenang santai di perairan dangkal. Tempat ini sangat cocok untuk snorkeling, diving, atau sekadar bersantai di tepi pantai sambil menikmati angin laut yang menyegarkan.",
+    "maps_url": "https://maps.app.goo.gl/jeN4LC9pUoMS53z77"
+  },
+  {
+    "id": "10",
+    "title": "Kawah Ijen",
+    "url": "/images/kawah-ijen.jpg",
+    "description": "Kawah Ijen menyajikan pemandangan alam yang langka dan menakjubkan. Fenomena blue fire yang hanya muncul saat malam hari menjadikannya unik di dunia. Danau asam berwarna toska yang berada di dasar kawah memantulkan cahaya pagi dengan indah. Meskipun pendakian cukup berat, pemandangan dari puncak akan membayar setiap tetes keringat dengan panorama yang sulit dilupakan.",
+    "maps_url": "https://maps.app.goo.gl/SK3ZJ91as8XZWLgA8"
+  },
+  {
+    "id": "11",
+    "title": "Taman Nasional Komodo",
+    "url": "/images/komodo.jpg",
+    "description": "Taman Nasional Komodo adalah salah satu situs warisan dunia UNESCO yang menawarkan petualangan luar biasa. Di sini, pengunjung dapat menyaksikan langsung kehidupan komodo, reptil raksasa yang hanya ada di Indonesia. Selain itu, taman ini memiliki pantai berpasir merah muda yang unik, bukit savana, serta dunia bawah laut yang kaya akan kehidupan. Sebuah destinasi yang menggabungkan keajaiban fauna dan lanskap eksotis.",
+    "maps_url": "https://maps.app.goo.gl/oS1sZfAHYpZXYkwH9"
+  },
+  {
+    "id": "12",
+    "title": "Air Terjun Tumpak Sewu",
+    "url": "/images/tumpak-sewu.jpeg",
+    "description": "Air Terjun Tumpak Sewu di Lumajang, Jawa Timur, menjulang megah seperti tirai alam raksasa. Ratusan aliran air mengalir dari tebing melengkung, menciptakan panorama yang luar biasa dari berbagai sudut pandang. Trekking menuju dasar air terjun membawa sensasi petualangan tersendiri. Suara gemuruh air dan kelembaban udara membuat setiap pengunjung merasa kecil di hadapan keindahan alam yang begitu agung.",
+    "maps_url": "https://maps.app.goo.gl/1FYX9Ao7qWBJ2ibx5"
   }
 ]

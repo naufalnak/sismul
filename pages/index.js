@@ -1,51 +1,63 @@
 import { useEffect, useState } from "react";
-import GalleryCard from "@/components/GalleryCard";
+import SortableGallery from "@/components/SortableGallery";
 import ModalViewer from "@/components/ModalViewer";
-import Masonry from "react-masonry-css";
 
 export default function Home() {
   const [gallery, setGallery] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(null);
-
-  const openModal = (index) => setCurrentIndex(index);
-  const closeModal = () => setCurrentIndex(null);
+  const [filteredGallery, setFilteredGallery] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     fetch("/api/gallery")
       .then((res) => res.json())
-      .then(setGallery);
-  }, []);
+      .then((data) => {
+        setGallery(data);
+        setFilteredGallery(data);
+      });
+  }, []); // Handle search
 
-  const breakpoints = {
-    default: 3,
-    1024: 2,
-    640: 1,
-  };
+  useEffect(() => {
+    const keyword = searchQuery.toLowerCase();
+    const results = gallery.filter((item) =>
+      item.title.toLowerCase().includes(keyword)
+    );
+    setFilteredGallery(results);
+  }, [searchQuery, gallery]);
 
   return (
-    <div className="p-6 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6 text-center">📸 Galeri Gambar</h1>
-
-      <Masonry
-        breakpointCols={breakpoints}
-        className="flex gap-4"
-        columnClassName="masonry-column">
-        {gallery.map((item, index) => (
-          <GalleryCard
-            key={item.id}
-            image={item}
-            onClick={() => openModal(index)}
-          />
-        ))}
-      </Masonry>
-
+    <main className="min-h-screen bg-white text-gray-800 py-16 px-6 lg:px-20">
+      {" "}
+      <section className="max-w-7xl mx-auto">
+        {" "}
+        <header className="mb-14 text-center">
+          {" "}
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 mb-4">
+            Rekomendasi Wisata Terbaik{" "}
+          </h1>{" "}
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Temukan destinasi wisata pilihan dengan visual menarik dan deskripsi
+            informatif.{" "}
+          </p>{" "}
+        </header>
+        {/* Input Pencarian */}{" "}
+        <div className="max-w-xl mx-auto mb-10">
+          {" "}
+          <input
+            type="text"
+            placeholder="Cari lokasi wisata..."
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />{" "}
+        </div>{" "}
+        <SortableGallery images={filteredGallery} onView={setSelectedImage} />{" "}
+      </section>{" "}
       <ModalViewer
-        isOpen={currentIndex !== null}
-        images={gallery}
-        currentIndex={currentIndex}
-        onNavigate={(newIndex) => setCurrentIndex(newIndex)}
-        onClose={closeModal}
-      />
-    </div>
+        isOpen={!!selectedImage}
+        image={selectedImage}
+        onClose={() => setSelectedImage(null)}
+      />{" "}
+    </main>
   );
 }

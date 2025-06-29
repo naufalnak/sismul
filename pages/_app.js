@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "leaflet/dist/leaflet.css";
 import Modal from "react-modal";
 
 // Inisialisasi react-modal untuk aksesibilitas
