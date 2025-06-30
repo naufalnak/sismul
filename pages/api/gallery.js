@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import formidable from "formidable";
 
-// Nonaktifkan bodyParser bawaan Next.js untuk handle FormData
+// Disable body parsing untuk FormData
 export const config = {
   api: {
     bodyParser: false,
@@ -12,22 +12,24 @@ export const config = {
 const dataFile = path.join(process.cwd(), "data", "gallery.json");
 const imagesDir = path.join(process.cwd(), "public", "images");
 
+// Helper: baca JSON
 const readData = () => {
   const fileData = fs.readFileSync(dataFile);
   return JSON.parse(fileData);
 };
 
+// Helper: tulis JSON
 const writeData = (data) => {
   fs.writeFileSync(dataFile, JSON.stringify(data, null, 2));
 };
 
+// Handler utama
 export default async function handler(req, res) {
   const gallery = readData();
 
   switch (req.method) {
     case "GET":
-      res.status(200).json(gallery);
-      break;
+      return res.status(200).json(gallery);
 
     case "POST": {
       const form = new formidable.IncomingForm({
@@ -55,47 +57,67 @@ export default async function handler(req, res) {
 
         const newItem = {
           id: Date.now().toString(),
-          title,
+          title: title.toString(),
           url: imageUrl,
-          description: description || "",
-          maps_url: maps_url || "",
+          description: description?.toString() || "",
+          maps_url: maps_url?.toString() || "",
         };
 
         gallery.push(newItem);
         writeData(gallery);
 
-        res.status(201).json(newItem);
+        return res.status(201).json(newItem);
       });
       break;
     }
 
     case "PUT": {
-      const { id, title, url, description, maps_url } = req.body;
+      const form = new formidable.IncomingForm({
+        uploadDir: imagesDir,
+        keepExtensions: true,
+      });
 
-      if (!id) {
-        return res.status(400).json({ message: "ID is required" });
-      }
+      form.parse(req, (err, fields, files) => {
+        if (err) {
+          console.error("Edit error:", err);
+          return res.status(500).json({ message: "Edit error" });
+        }
 
-      const index = gallery.findIndex((item) => item.id === id);
-      if (index === -1) {
-        return res.status(404).json({ message: "Item not found" });
-      }
+        const { id, title, description, maps_url, url } = fields;
+        const file = files.file;
 
-      gallery[index] = {
-        ...gallery[index],
-        title: title || gallery[index].title,
-        url: url || gallery[index].url,
-        description: description ?? gallery[index].description,
-        maps_url: maps_url ?? gallery[index].maps_url,
-      };
+        if (!id) {
+          return res.status(400).json({ message: "ID is required" });
+        }
 
-      writeData(gallery);
-      res.status(200).json(gallery[index]);
+        const index = gallery.findIndex((item) => item.id === id);
+        if (index === -1) {
+          return res.status(404).json({ message: "Item not found" });
+        }
+
+        let newUrl = url?.toString() || gallery[index].url;
+        if (file) {
+          const filename = path.basename(file.filepath);
+          newUrl = `/images/${filename}`;
+        }
+
+        gallery[index] = {
+          ...gallery[index],
+          title: title?.toString() || gallery[index].title,
+          url: newUrl,
+          description: description?.toString() ?? gallery[index].description,
+          maps_url: maps_url?.toString() ?? gallery[index].maps_url,
+        };
+
+        writeData(gallery);
+        return res.status(200).json(gallery[index]);
+      });
       break;
     }
 
     case "DELETE": {
       const { id } = req.query;
+
       if (!id) return res.status(400).json({ message: "ID is required" });
 
       const index = gallery.findIndex((item) => item.id === id);
@@ -105,14 +127,15 @@ export default async function handler(req, res) {
 
       const deleted = gallery.splice(index, 1);
       writeData(gallery);
-      res
-        .status(200)
-        .json({ message: "Deleted successfully", deleted: deleted[0] });
-      break;
+
+      return res.status(200).json({
+        message: "Deleted successfully",
+        deleted: deleted[0],
+      });
     }
 
     default:
       res.setHeader("Allow", ["GET", "POST", "PUT", "DELETE"]);
-      res.status(405).end(`Method ${req.method} Not Allowed`);
+      return res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }

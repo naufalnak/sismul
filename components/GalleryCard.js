@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { MapPin, Trash2 } from "lucide-react";
+import { MapPin, Trash2, Pencil } from "lucide-react";
 
 export default function GalleryCard({
   image,
   onClick,
   onDelete,
+  onEdit,
   isAdmin = false,
 }) {
   return (
@@ -37,14 +38,24 @@ export default function GalleryCard({
       </div>
 
       {isAdmin && (
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            onDelete?.(image.id);
-          }}
-          className="absolute top-2 right-2 bg-white p-1 rounded-full shadow text-red-500 hover:bg-red-500 hover:text-white transition">
-          <Trash2 size={18} />
-        </button>
+        <div className="absolute top-2 right-2 flex gap-2">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onEdit?.(image);
+            }}
+            className="bg-white p-1 rounded-full shadow text-blue-500 hover:bg-blue-500 hover:text-white transition">
+            <Pencil size={18} />
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onDelete?.(image.id);
+            }}
+            className="bg-white p-1 rounded-full shadow text-red-500 hover:bg-red-500 hover:text-white transition">
+            <Trash2 size={18} />
+          </button>
+        </div>
       )}
     </div>
   );
